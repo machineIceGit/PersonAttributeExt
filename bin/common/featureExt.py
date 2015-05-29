@@ -2,6 +2,7 @@
 
 import os
 import sys
+import jieba.posseg as pseg
 
 class featureExt:
 
@@ -9,10 +10,13 @@ class featureExt:
         pass
 
 
-    def init(self):
+    def init(self, confDict ={}):
         return True
 
-    def extract(self):
+    def run(self, textLine):
+        words = pseg.cut(textLine)
+        for w in words:
+            print w.word, w.flag
         return True
 
 
