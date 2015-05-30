@@ -1,10 +1,10 @@
 attributeExts:
 
-    - name: school
-      paramDict: null
+    - ExactorName: SchoolExtractor
+      paramDict: 
+        modelFile: ../data/models/model_school
 
-    - name: title
-      paramDict: null
+    - ExactorName: TitleExtractor
+      paramDict: 
+        modelFile: ../data/models/model_title
 
-    - name: birthData
-      paramDIct: null
