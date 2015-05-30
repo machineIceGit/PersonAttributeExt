@@ -5,7 +5,7 @@ class TitleExtractor:
     def __init__(self):
         pass
 
-    def init(self):
+    def init(self, confDict={}):
         return True
 
     def run(self, record={}):
