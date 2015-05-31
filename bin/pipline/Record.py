@@ -5,6 +5,7 @@ class Record:
     TEXT =None
     SCHOOL =None
     TITLE =None
+    TARGET_NAME =None
 
     def __init__(self, tDict={}):
         self.__dict__.update(tDict)
@@ -13,6 +14,12 @@ class Record:
         self.__dict__[key] = value
 
     def __getattr__(self, key):
+        if key in self.__dict__:
+            return self.__dict__[key]
+        else:
+            return False
+    
+    def get(self, key):
         if key in self.__dict__:
             return self.__dict__[key]
         else:

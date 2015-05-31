@@ -1,6 +1,6 @@
-python ModelTrain/SchoolModelTrain.py -i input -c  ../conf/ModelTrain/schoolConf.yaml > train.data
+python ModelTrain/CrfModelTrain.py -i $2 -c ../conf/ModelTrain/$1Conf.yaml > train_data/$1_train.data
 
 
-sudo ./../depence/CRF++-0.53/crf_learn -f 3 -c 4.0 template train.data ../data/models/model_school
+sudo ./../depence/CRF++-0.53/crf_learn -f 3 -c 4.0 template train/data/$1_train.data ../data/models/model_$1_v1
 
 

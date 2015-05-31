@@ -35,6 +35,7 @@ class featureExt:
         return ''.join(retArray)
 
     def run(self, textLine):    
+
         array = pseg.cut(textLine)
         tag ='O'
         inner = 0
@@ -62,32 +63,6 @@ class featureExt:
                     tag = 'E'
                 else:
                     tag = 'I'
-            #index =0
-            #uTag = ''
-            #print words[i].word + '\t' + tag
-            #for uChar in words[i].word:
-            #    flag = tag
-            #    if index == 0:
-            #        if len(words[i].word) == 1:
-            #            uTag = 'S'
-            #        else:
-            #            uTag = 'B'
-            #        if tag == 'E':
-            #            flag = 'I'
-            #        if tag == 'S':
-            #            flag = 'B'
-            #    elif index == len(words[i].word)-1:
-            #        uTag = 'E'
-            #        if tag == 'B':
-            #            flag = 'I'
-            #        if tag == 'S':
-            #            flag = 'E'
-            #    else:
-            #        uTag = 'I'
-            #        if tag != 'O':
-            #            flag = 'I'
-                #print uChar + '\t' + tag + '\t' + flag + '\t' + str(index)
-            #    index+=1
             line = line + words[i].word + '\t' + words[i].flag + '\t' + tag  + '\n'
         if inner == 0:
             print line
